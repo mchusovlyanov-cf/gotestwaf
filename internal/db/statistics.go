@@ -2,6 +2,9 @@ package db
 
 import (
 	"sort"
+
+	"github.com/jinzhu/copier"
+	"github.com/wallarm/gotestwaf/pkg/statistic"
 )
 
 type Statistics struct {
@@ -488,4 +491,10 @@ func calculateScorePercentage(s *Score, truePosBlockedNum, truePosNum, trueNegBy
 	} else {
 		s.Average = -1.0
 	}
+}
+
+func (st Statistics) ToPublicStatistic() statistic.Statistics {
+	publicStat := statistic.Statistics{}
+	copier.Copy(&publicStat, &st)
+	return publicStat
 }

@@ -12,6 +12,7 @@ require (
 	github.com/go-echarts/go-echarts/v2 v2.2.5
 	github.com/go-playground/validator/v10 v10.27.0
 	github.com/hashicorp/go-multierror v1.1.1
+	github.com/jinzhu/copier v0.4.0
 	github.com/leanovate/gopter v0.2.11
 	github.com/mcnijman/go-emailaddress v1.1.1
 	github.com/olekukonko/tablewriter v1.0.8
